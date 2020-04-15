@@ -8,6 +8,9 @@ html,
 body {
 	height: 100%;
 }
+body{
+    overflow-x: hidden;
+}
 a{
     display: inline-block;
     text-decoration: none;
@@ -98,4 +101,16 @@ body{
         padding: 0 15px;
     }
     
+}
+.angel-right{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        content: '\f105';
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        color: $green;
+        font-size: 14px;
+    }
 }
