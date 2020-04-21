@@ -20,6 +20,35 @@ $(function () {
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
   });
 
   $(".icon-th-list").on('click', function(){
@@ -42,6 +71,8 @@ $(function () {
   $(".header__btn-menu").on('click', function(){
     $(".header__box").toggleClass('active');
   });
+
+  $('input[type=file], select').styler();
 
   $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function(event) {
     var id = $(this).attr('data-id');
